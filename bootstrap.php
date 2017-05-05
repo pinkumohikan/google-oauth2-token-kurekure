@@ -9,4 +9,6 @@ $client = new Google_Client([
     'client_secret' => getenv('GOOGLE_CLIENT_SECRET'),
 ]);
 $client->setRedirectUri('http://' . $_SERVER['HTTP_HOST'] . '/oauth2callback.php');
+
+// NOTE: 必要なスコープを下記のように追加すること
 $client->addScope(\Google_Service_Blogger::BLOGGER);
