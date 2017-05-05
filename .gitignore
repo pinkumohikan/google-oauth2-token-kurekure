@@ -1,0 +1,9 @@
+# Dir
+vendor/
+
+# Extention
+*.swp
+
+# File
+.env
+composer.phar
