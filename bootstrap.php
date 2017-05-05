@@ -10,6 +10,7 @@ $client = new Google_Client([
 ]);
 $client->setRedirectUri('http://' . $_SERVER['HTTP_HOST'] . '/oauth2callback.php');
 $client->setIncludeGrantedScopes(true);
+$client->setAccessType('offline');
 
 // NOTE: 必要なスコープを下記のように追加すること
 $client->addScope(\Google_Service_Blogger::BLOGGER);
