@@ -2,7 +2,7 @@
 
 require_once __DIR__.'/vendor/autoload.php';
 
-(new Dotenv\Dotenv(APP_ROOT))->load();
+(new Dotenv\Dotenv(__DIR__))->load();
 
 $client = new Google_Client([
     'client_id'     => getenv('GOOGLE_CLIENT_ID'),
