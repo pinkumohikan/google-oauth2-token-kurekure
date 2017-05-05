@@ -8,9 +8,9 @@ composer.phar:
 	php -r "unlink('composer-setup.php');"
 
 
-.PHONY: install server
+.PHONY: setup server
 
-install: .env composer.phar
+setup: .env composer.phar
 	./composer.phar install --no-dev --prefer-dist --optimize-autoloader --no-interaction
 
 server:
